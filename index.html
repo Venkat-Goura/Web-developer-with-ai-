@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Wedding Invitation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 🎵 బ్యాక్‌గ్రౌండ్ ఆడియో ట్యాగ్ (ఇంటర్నెట్ నుండి ఒక మంచి ఇన్‌స్ట్రుమెంటల్ మ్యూజిక్ లింక్ ఇచ్చాను) -->
+    <audio id="weddingMusic" loop>
+        <source src="https://soundhelix.com" type="audio/mp3">
+    </audio>
+
+    <div class="card-container">
+        <div class="wedding-card animate-card">
+            
+            <!-- 🎵 మ్యూజిక్ ప్లే/పాజ్ బంటన్ -->
+            <button id="musicControlBtn" class="music-btn" onclick="toggleMusic()">🎵 Play Music</button>
+
+            <div class="decorative-border"></div>
+            
+            <p class="invitation-text">We Cordially Invite You To The Wedding Of</p>
+            
+            <h1 class="couple-names">Kalyan <br><span class="and-symbol">&</span><br> Divya</h1>
+            
+            <div class="divider">✨ 💖 ✨</div>
+            
+            <div class="event-details">
+                <p class="date">📅 Sunday, November 15, 2026</p>
+                <p class="time">⏰ Muhurtham at 10:30 AM</p>
+                <p class="venue">📍 Srinivasa Kalyana Mandapam, <br>Tirupati, Andhra Pradesh</p>
+            </div>
+            
+            <div class="divider">✨ 💖 ✨</div>
+            
+            <button class="rsvp-btn" onclick="alert('Thank you for responding! See you at the wedding. 🎉')">
+                💌 RSVP Now
+            </button>
+            
+            <p class="footer-text">Bless the couple with your presence!</p>
+        </div>
+    </div>
+
+    <!-- 🧠 మ్యూజిక్ ప్లే అవ్వడానికి చిన్న జావాస్క్రిప్ట్ లాజిక్ -->
+    <script>
+        function toggleMusic() {
+            var music = document.getElementById("weddingMusic");
+            var btn = document.getElementById("musicControlBtn");
+            
+            if (music.paused) {
+                music.play();
+                btn.innerHTML = "⏸️ Pause Music";
+                btn.classList.add("playing");
+            } else {
+                music.pause();
+                btn.innerHTML = "🎵 Play Music";
+                btn.classList.remove("playing");
+            }
+        }
+    </script>
+</body>
+</html>
+<link rel="stylesheet" href="style.css">
